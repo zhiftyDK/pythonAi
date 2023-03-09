@@ -7,9 +7,9 @@ with sync_playwright() as p:
     page.click("a.select2-choice")
     page.click("text=College360")
     page.click("button#btnUnilogin")
-    page.fill("input#username", "osca1939")
+    page.fill("input#username", "")
     page.click("button[type=submit]")
-    page.fill("input#form-error", "Rzp53qpw2005")
+    page.fill("input#form-error", "")
     page.click("button[type=submit]")
     with page.expect_navigation(url="https://all.uddataplus.dk/opgave/"):
         print(page.inner_html("body"))
